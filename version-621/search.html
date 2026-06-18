@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://young-band-ba97.laodayizhi.workers.dev/ads-widget.js"></script>
+<title>搜索-最新欧美视频-最新视频合集-分类内容持续更新</title>
+    <meta name="description" content="搜索最新欧美视频、视频合集、影片标题、类型、地区与标签。">
+    <meta name="keywords" content="最新欧美视频,欧美视频,最新视频,视频合集,内容更新,热门视频,搜索,筛选">
+    <link rel="stylesheet" href="./assets/styles.css">
+    
+</head>
+<body>
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+    <nav class="container-custom py-4">
+        <div class="flex items-center justify-between">
+            <a href="./index.html" class="flex items-center space-x-2 group" aria-label="最新欧美视频首页">
+                <div class="site-logo-mark p-2 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg transform group-hover:scale-110 transition-transform duration-200">▶</div>
+                <div>
+                    <div class="text-xl font-bold text-secondary-900">最新欧美视频</div>
+                    <div class="text-xs text-secondary-600">最新视频合集</div>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="./index.html" class="text-secondary-700 hover:text-primary-600 transition-colors font-medium">首页</a>
+                <a href="./categories.html" class="text-secondary-700 hover:text-primary-600 transition-colors font-medium">分类</a>
+                <a href="./category-europe-america-featured.html" class="text-secondary-700 hover:text-primary-600 transition-colors font-medium">欧美精选</a>
+<a href="./category-latest-videos.html" class="text-secondary-700 hover:text-primary-600 transition-colors font-medium">最新视频</a>
+<a href="./category-hot-collection.html" class="text-secondary-700 hover:text-primary-600 transition-colors font-medium">热门合集</a>
+<a href="./category-crime-suspense.html" class="text-secondary-700 hover:text-primary-600 transition-colors font-medium">悬疑犯罪</a>
+                <a href="./rankings.html" class="text-secondary-700 hover:text-primary-600 transition-colors font-medium">排行榜</a>
+                <a href="./search.html" class="p-2 hover:bg-secondary-100 rounded-lg transition-colors" aria-label="搜索">⌕</a>
+            </div>
+            <button class="md:hidden p-2 hover:bg-secondary-100 rounded-lg transition-colors js-menu-toggle" type="button" aria-label="打开导航">☰</button>
+        </div>
+        <div class="md:hidden mt-4 pb-4 space-y-2 border-t pt-4 mobile-menu hidden">
+            <a href="./index.html" class="block px-4 py-2 hover:bg-secondary-100 rounded-lg transition-colors">首页</a>
+            <a href="./categories.html" class="block px-4 py-2 hover:bg-secondary-100 rounded-lg transition-colors">分类总览</a>
+            <a href="./category-europe-america-featured.html" class="block px-4 py-2 hover:bg-secondary-100 rounded-lg transition-colors">欧美精选</a>
+<a href="./category-latest-videos.html" class="block px-4 py-2 hover:bg-secondary-100 rounded-lg transition-colors">最新视频</a>
+<a href="./category-hot-collection.html" class="block px-4 py-2 hover:bg-secondary-100 rounded-lg transition-colors">热门合集</a>
+<a href="./category-crime-suspense.html" class="block px-4 py-2 hover:bg-secondary-100 rounded-lg transition-colors">悬疑犯罪</a>
+            <a href="./rankings.html" class="block px-4 py-2 hover:bg-secondary-100 rounded-lg transition-colors">排行榜</a>
+            <a href="./search.html" class="block px-4 py-2 hover:bg-secondary-100 rounded-lg transition-colors">搜索</a>
+        </div>
+    </nav>
+</header>
+    <main>
+        <section class="bg-white border-b sticky top-0 z-10 search-top-spacer">
+            <div class="container-custom py-6">
+                <div class="flex items-center gap-4 mb-4">
+                    <a href="index.html" class="text-secondary-700 hover:text-primary-600 transition-colors text-2xl">←</a>
+                    <div class="flex-1 relative">
+                        <input type="search" id="search-input" class="w-full px-5 py-3 pr-12 border-2 border-secondary-300 rounded-full focus:border-primary-500 focus:outline-none transition-colors" placeholder="搜索影片标题、简介、地区、类型或标签" autocomplete="off">
+                        <button type="button" id="search-button" class="absolute right-3 top-1/2 -translate-y-1 p-2 text-secondary-500 hover:text-primary-600 transition-colors">⌕</button>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-2" id="search-hotwords">
+                    <button class="search-chip" type="button">欧美</button>
+                    <button class="search-chip" type="button">悬疑</button>
+                    <button class="search-chip" type="button">爱情</button>
+                    <button class="search-chip" type="button">喜剧</button>
+                    <button class="search-chip" type="button">2025</button>
+                </div>
+            </div>
+        </section>
+        <section class="container-custom py-12">
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <h1 class="text-3xl font-bold text-secondary-900 mb-2">搜索筛选</h1>
+                    <p class="text-secondary-600" id="search-summary">输入关键词后即可在全部影片中搜索。</p>
+                </div>
+            </div>
+            <div id="search-results" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+        </section>
+    </main>
+    <footer class="bg-secondary-900 text-secondary-100 mt-20">
+    <div class="container-custom py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="site-logo-mark p-2 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg">▶</div>
+                    <div>
+                        <h3 class="text-lg font-bold">最新欧美视频</h3>
+                        <p class="text-sm text-secondary-400">最新视频合集</p>
+                    </div>
+                </div>
+                <p class="text-secondary-400 text-sm leading-relaxed mb-4">最新欧美视频栏目按更新节奏整理内容，覆盖多类型欧美视频与精选分类。</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">影片分类</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="./category-europe-america-featured.html" class="text-secondary-400 hover:text-primary-400 transition-colors">欧美精选</a></li>
+<li><a href="./category-latest-videos.html" class="text-secondary-400 hover:text-primary-400 transition-colors">最新视频</a></li>
+<li><a href="./category-hot-collection.html" class="text-secondary-400 hover:text-primary-400 transition-colors">热门合集</a></li>
+<li><a href="./category-crime-suspense.html" class="text-secondary-400 hover:text-primary-400 transition-colors">悬疑犯罪</a></li>
+<li><a href="./category-romance-comedy.html" class="text-secondary-400 hover:text-primary-400 transition-colors">爱情喜剧</a></li>
+<li><a href="./category-action-fantasy.html" class="text-secondary-400 hover:text-primary-400 transition-colors">动作奇幻</a></li>
+<li><a href="./category-series-zone.html" class="text-secondary-400 hover:text-primary-400 transition-colors">剧集专区</a></li>
+<li><a href="./category-classic-mix.html" class="text-secondary-400 hover:text-primary-400 transition-colors">经典混剪</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">站内入口</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="./categories.html" class="text-secondary-400 hover:text-primary-400 transition-colors">分类总览</a></li>
+                    <li><a href="./rankings.html" class="text-secondary-400 hover:text-primary-400 transition-colors">排行榜</a></li>
+                    <li><a href="./search.html" class="text-secondary-400 hover:text-primary-400 transition-colors">搜索筛选</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-secondary-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-secondary-400 mb-4 md:mb-0">© 2026 最新欧美视频 - 最新视频合集</p>
+        </div>
+    </div>
+</footer>
+    <script src="./assets/site.js"></script>
+<script src="assets/search-data.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?60fa60a3da050a73eefefaaebe0afaf5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
